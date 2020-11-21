@@ -1,0 +1,5 @@
+const int pulsadorBajar = D6; 
+const int pulsadorSubir = D6;
+const int SondaTemperatura= D3
+const int PersianaBajar=D2;
+const inr PersianaSubir=D1;
