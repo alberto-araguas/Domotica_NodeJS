@@ -65,13 +65,13 @@ void callback(char* topic, byte* payload, unsigned int length) { /*Que hacer cua
 
 
 void setup() {
-  pinMode(2, OUTPUT);        /* builtin led*/
-  digitalWrite(2, LOW);      /*encender led  */   
-  pinMode(pinSubir, OUTPUT); /*Pin Subir*/   
-  pinMode(pinBajar, OUTPUT);  /*Pin Bajar*/
-  pinMode(pulsadorSubir, INPUT_PULLUP);   /*Pin pulsador subir*/
-  pinMode(pulsadorBajar, INPUT_PULLUP);   /*Pin pulsador bajar*/
-  digitalWrite(pinSubir, HIGH);     //poner a 0 los reles
+  pinMode(2, OUTPUT);        					/* builtin led*/
+  digitalWrite(2, LOW);      					/*encender led  */   
+  pinMode(pinSubir, OUTPUT); 					/*Pin Subir*/   
+  pinMode(pinBajar, OUTPUT);  					/*Pin Bajar*/
+  pinMode(pulsadorSubir, INPUT_PULLUP);   		/*Pin pulsador subir*/
+  pinMode(pulsadorBajar, INPUT_PULLUP);   		/*Pin pulsador bajar*/
+  digitalWrite(pinSubir, HIGH);     			//poner a 0 los reles
   digitalWrite(pinBajar, HIGH);
    Serial.begin(115200);
   setup_wifi();
@@ -83,8 +83,8 @@ void setup() {
     Serial.println("Error setting up MDNS responder!");
   }
   Serial.println("mDNS responder started");
-  MDNS.addService("http", "tcp", 80); // Announce esp tcp service on port 8080
-  MDNS.addService("mqtt", "tcp", 1883); // Announce esp tcp service on port 8080
+  MDNS.addService("http", "tcp", 80); 			// Announce esp tcp service on port 8080
+  MDNS.addService("mqtt", "tcp", 1883); 		// Announce esp tcp service on port 8080
   ArduinoOTA.onStart([]() {
  Serial.println("Start");
  });
